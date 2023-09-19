@@ -6,15 +6,14 @@ from datetime import datetime
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
-
 @app.route('/')
-def index():
-    return (render_template('index.html',
-                        current_time=datetime.utcnow()))
 
 def index():
-    return('<h1> Hello Rupin!</h1>')
+
+
+    return(render_template('index.html',
+                        current_time=datetime.utcnow()))
 
 @app.route('/user/<name>')
 def user(name):
-    return ('<h1> Hello , {}! </h1>'.format(name))
+    return ('<h1> Helloo , {}! </h1>'.format(name))
